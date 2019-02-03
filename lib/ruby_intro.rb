@@ -40,13 +40,12 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  (return false) if s.empty?
-  first_letter = s[0].downcase
-  unless !first_letter.match?(/[a-z]/) || first_letter.match?(/[aeiou]/)
-    return true
-  else
-    return false
+  unless s[0].nil?
+    unless s[0].downcase[/[a-z]/].nil?
+      return s[0].downcase[/[a-z]/][/[aeiou]/].nil?
+    end
   end
+  return false
 end
 
 def binary_multiple_of_4? s
